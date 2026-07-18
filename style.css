@@ -194,3 +194,75 @@ nav ul li{
 }
 
 }
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.gallery img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:20px;
+    border:3px solid #38bdf8;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+    transition:all .4s ease;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 0 30px #38bdf8;
+}
+
+/* Resume Section */
+
+#resume{
+    text-align:center;
+}
+
+#resume .btn{
+    margin-top:20px;
+}
+
+/* Contact */
+
+#contact i{
+    color:#38bdf8;
+    margin-right:10px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#38bdf8;
+    border-radius:10px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.gallery img{
+height:280px;
+}
+
+}
